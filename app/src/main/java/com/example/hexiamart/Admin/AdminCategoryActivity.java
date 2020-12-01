@@ -1,4 +1,4 @@
-package com.example.hexiamart;
+package com.example.hexiamart.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.hexiamart.HomeActivity;
+import com.example.hexiamart.MainActivity;
+import com.example.hexiamart.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView tShirts, sportsTShirts, femaleDresses, sweathers;

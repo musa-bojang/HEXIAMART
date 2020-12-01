@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 //import android.widget.CheckBox;
+import com.example.hexiamart.Admin.AdminCategoryActivity;
 import com.rey.material.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity
     private EditText InputPhoneNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
-    private TextView AdminLink, NotAdminLink;
+    private TextView AdminLink, NotAdminLink, ForgotPasswordLink;
 
     private String parentDbName = "Users";
     private CheckBox chkBoxRememberMe;
@@ -48,12 +49,22 @@ public class LoginActivity extends AppCompatActivity
         InputPhoneNumber = findViewById(R.id.login_phone_number_input);
         AdminLink = findViewById(R.id.admin_panel_link);
         NotAdminLink = findViewById(R.id.not_admin_panel_link);
+        ForgotPasswordLink = findViewById(R.id.forgot_password);
+
         loadingBar = new ProgressDialog(this);
 
 
         chkBoxRememberMe = findViewById(R.id.remember_me_chkb);
         Paper.init(this);
 
+        ForgotPasswordLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
+                intent.putExtra("check", "login");
+                startActivity(intent);
+            }
+        });
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override

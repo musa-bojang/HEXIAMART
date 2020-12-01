@@ -26,10 +26,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HexiaMart"
         tools:replace="android:theme">
-        <activity android:name=".AdminMaintainProductsActivity"></activity>
+        <activity android:name=".ResetPasswordActivity"></activity>
+        <activity android:name=".Admin.AdminMaintainProductsActivity" />
         <activity android:name=".SearchProductActivity" />
-        <activity android:name=".AdminUserProductsActivity" />
-        <activity android:name=".AdminNewOrdersActivity" />
+        <activity android:name=".Admin.AdminUserProductsActivity" />
+        <activity android:name=".Admin.AdminNewOrdersActivity" />
         <activity android:name=".PaymentDetails2" />
         <activity android:name=".PaymentDetailsold" />
         <activity android:name=".ToPaypalActivity" />
@@ -41,8 +42,8 @@
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.HexiaMart.NoActionBar" />
-        <activity android:name=".AdminAddNewProductActivity" />
-        <activity android:name=".AdminCategoryActivity" />
+        <activity android:name=".Admin.AdminAddNewProductActivity" />
+        <activity android:name=".Admin.AdminCategoryActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
